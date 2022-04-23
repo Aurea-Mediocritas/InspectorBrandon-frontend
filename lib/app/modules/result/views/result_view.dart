@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:inspector_brandon_frontend/app/core/theme/theme.dart';
+import 'package:inspector_brandon_frontend/app/widgets/animatedscore.dart';
+import 'package:inspector_brandon_frontend/app/widgets/stars.dart';
 
 import '../controllers/result_controller.dart';
 
@@ -21,20 +24,40 @@ class ResultView extends GetView<ResultController> {
       body: Center(
         child: Column(
           children: [
-            Column(
+            Padding(
+              padding: EdgeInsets.all(15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Brand Name",
+                    style: TextStyle(fontSize: 56),
+                  ),
+                  Stars(
+                    points: 50,
+                  ),
+                ],
+              ),
+            ),
+            AnimatedScore(
+              points: 78,
+              str: "General Score",
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("InspektorBrandon"),
-                Row(
-                  children: [
-                    iconFullStar,
-                    iconFullStar,
-                    iconFullStar,
-                    iconFullStar,
-                    iconFullStar,
-                  ],
+                AnimatedScore(
+                  points: 93,
+                  str: "Carbon Score",
+                ),
+                AnimatedScore(
+                  points: 35,
+                  str: "Clarity Score",
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

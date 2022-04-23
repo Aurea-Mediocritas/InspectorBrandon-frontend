@@ -49,11 +49,20 @@ class HomeView extends GetView<HomeController> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              'INSPECTOR BRANDON',
-              style: TextStyle(fontSize: 40),
+            Image.asset("logo.png"),
+            Padding(
+              padding: EdgeInsets.all(30),
+              child: Container(
+                width: 600,
+                child: TextField(
+                  decoration: InputDecoration(
+                    // border: OutlineInputBorder(),
+                    hintText: 'Inspect Brand',
+                    suffixIcon: iconSearch,
+                  ),
+                ),
+              ),
             ),
-            // Image.asset("logo.png"),
             Row(
               children: [],
             ),
