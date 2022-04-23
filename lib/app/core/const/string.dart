@@ -1,4 +1,4 @@
-const String sAppTitle = "Landify";
+const String sAppTitle = "InspectorBrandon";
 const String sHintTextSearchBar = "Type address here...";
 const String sLabelTextSearchBar = "Street";
 const String sSearch = "Search!";
