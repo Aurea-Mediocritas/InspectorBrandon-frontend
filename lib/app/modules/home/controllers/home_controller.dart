@@ -1,20 +1,26 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+//import 'package:landify/app/data/scores_model.dart';
+//import 'package:landify/app/data/scores_provider.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
+  RxString address = "".obs;
+  //late Scores scores;
+  RxBool hasData = false.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  bool hasAddress() {
+    return address.value.isNotEmpty;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {}
-  void increment() => count.value++;
+  /*void getData() async {
+    await ScoresProvider().getScores(address.value).then(
+      (respScores) {
+        scores = respScores;
+        hasData.value = true;
+      },
+      onError: (err) {
+        Get.dialog(err);
+      },
+    );
+  }*/
 }

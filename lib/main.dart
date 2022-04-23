@@ -1,16 +1,25 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:inspector_brandon_frontend/app/widgets/cameraWidget.dart';
+import 'package:inspector_brandon_frontend/app/core/const/string.dart';
+import 'package:inspector_brandon_frontend/app/core/theme/theme.dart';
 import 'app/routes/app_pages.dart';
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
+
   runApp(
-    GetMaterialApp(
-      title: "Application",
-      initialRoute: AppPages.INITIAL,
-      getPages: AppPages.routes,
+    ScreenUtilInit(
+      designSize: const Size(1920, 1080),
+      builder: () => GetMaterialApp(
+        theme: lightTheme,
+        darkTheme: darkTheme,
+        defaultTransition: Transition.fade,
+        debugShowCheckedModeBanner: false,
+        title: sAppTitle,
+        initialRoute: AppPages.INITIAL,
+        getPages: AppPages.routes,
+      ),
     ),
   );
 }
