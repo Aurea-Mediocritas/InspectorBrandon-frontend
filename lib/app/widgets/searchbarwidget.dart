@@ -39,7 +39,7 @@ class SearchBarWidget extends StatelessWidget {
         ),
         ElevatedButton(
           onPressed: () {
-            controller.getData();
+            controller.getData("Coca-Cola");
             Get.snackbar(
               sRequestSent,
               controller.inputString.value,

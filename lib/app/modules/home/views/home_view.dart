@@ -16,6 +16,8 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     Get.put(HomeController());
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => controller.getData("Coca-Cola")),
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 0,
@@ -57,7 +59,7 @@ class HomeView extends GetView<HomeController> {
             ),
             // Image.asset("logo.png"),
             AnimatedTexts(),
-            Obx(() => SearchBarWidget(controller: controller)),
+            SearchBarWidget(controller: controller),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

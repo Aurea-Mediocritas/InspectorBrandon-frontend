@@ -12,16 +12,10 @@ class HomeController extends GetxController {
     return inputString.value.isNotEmpty;
   }
 
-  void getData() async {
-    await ResponseModelProvider().getResponseModel(inputString.value).then(
-      (response) {
-        print(response);
-        responseModel = response;
-        hasData.value = true;
-      },
-      onError: (err) {
-        Get.dialog(err);
-      },
-    );
+  void getData(String data) async {
+    print("request");
+    responseModel = await ResponseModelProvider().getResponseModel(data);
+    hasData.value = true;
+    print(responseModel);
   }
 }
