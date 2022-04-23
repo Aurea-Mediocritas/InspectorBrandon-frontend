@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+
 import 'package:inspector_brandon_frontend/app/core/const/icons.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -32,7 +33,7 @@ class HomeView extends GetView<HomeController> {
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: ElevatedButton(
-                    onPressed: () => Get.toNamed('/barcode'),
+                    onPressed: () => Get.toNamed('/result'),
                     child: Row(
                       children: [
                         Padding(
