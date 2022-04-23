@@ -13,11 +13,16 @@ class HomeView extends GetView<HomeController> {
         centerTitle: true,
       ),
       body: Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+          child: Column(
+        children: [
+          Text(
+            'HomeView is working',
+            style: TextStyle(fontSize: 20),
+          ),
+          ElevatedButton(
+              onPressed: () => Get.toNamed('/camera'), child: Text('camera'))
+        ],
+      )),
     );
   }
 }
