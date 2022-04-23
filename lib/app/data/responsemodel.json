@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "brand_rating": {
+    "CompanyName": "Nestlé",
+    "AccountNumber": 12942,
+    "Country": "Switzerland",
+    "Reporting_Year": 2013,
+    "TickerSymbol": "NESN VX",
+    "ISIN_": "CH0038863350",
+    "Disclosure_Score": 100.0,
+    "Performance_Band": "A",
+    "Response_Status": "AQ*",
+    "Scope_1metric_tonnesCO2e": 3706080.0,
+    "Scope_2metric_tonnesCO2e": 3391319.0,
+    "Country_Location": "(46.818188, 8.227512)"
+  }
+}

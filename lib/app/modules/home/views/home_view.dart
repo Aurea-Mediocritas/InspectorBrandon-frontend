@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inspector_brandon_frontend/app/core/const/string.dart';
 import 'package:inspector_brandon_frontend/app/core/const/vars.dart';
+import 'package:inspector_brandon_frontend/app/widgets/animatedtexts.dart';
+import 'package:inspector_brandon_frontend/app/widgets/searchbarwidget.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -50,20 +52,19 @@ class HomeView extends GetView<HomeController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'INSPECTOR BRANDON',
+              sAppTitle,
               style: TextStyle(fontSize: 40),
             ),
             // Image.asset("logo.png"),
-            Row(
-              children: [],
-            ),
+            AnimatedTexts(),
+            Obx(() => SearchBarWidget(controller: controller)),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
                   padding: EdgeInsets.all(10),
                   child: ElevatedButton(
-                    onPressed: () => Get.toNamed('/result'),
+                    onPressed: () => Get.toNamed('/barcode'),
                     child: Row(
                       children: [
                         Padding(

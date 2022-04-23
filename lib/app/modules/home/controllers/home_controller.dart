@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-//import 'package:landify/app/data/scores_model.dart';
-//import 'package:landify/app/data/scores_provider.dart';
+import 'package:inspector_brandon_frontend/app/data/providers/response_model_provider.dart';
+import 'package:inspector_brandon_frontend/app/data/response_model_model.dart';
 
 class HomeController extends GetxController {
-  RxString address = "".obs;
-  //late Scores scores;
+  RxString inputString = "".obs;
+  late ResponseModel responseModel;
   RxBool hasData = false.obs;
 
-  bool hasAddress() {
-    return address.value.isNotEmpty;
+  bool hasinputString() {
+    return inputString.value.isNotEmpty;
   }
 
-  /*void getData() async {
-    await ScoresProvider().getScores(address.value).then(
-      (respScores) {
-        scores = respScores;
+  void getData() async {
+    await ResponseModelProvider().getResponseModel(inputString.value).then(
+      (response) {
+        print(response);
+        responseModel = response;
         hasData.value = true;
       },
       onError: (err) {
         Get.dialog(err);
       },
     );
-  }*/
+  }
 }

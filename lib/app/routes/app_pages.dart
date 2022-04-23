@@ -1,7 +1,9 @@
 import 'package:get/get.dart';
 
-import '../modules/camera/bindings/camera_binding.dart';
-import '../modules/camera/views/camera_view.dart';
+import '../modules/barcode/bindings/barcode_binding.dart';
+import '../modules/barcode/views/barcode_view.dart';
+import '../modules/camerapage/bindings/camerapage_binding.dart';
+import '../modules/camerapage/views/camerapage_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/result/bindings/result_binding.dart';
@@ -26,9 +28,14 @@ class AppPages {
       binding: ResultBinding(),
     ),
     GetPage(
-      name: _Paths.CAMERA,
-      page: () => CameraView(),
-      binding: CameraBinding(),
+      name: _Paths.BARCODE,
+      page: () => BarcodeView(),
+      binding: BarcodeBinding(),
+    ),
+    GetPage(
+      name: _Paths.CAMERAPAGE,
+      page: () => CamerapageView(),
+      binding: CamerapageBinding(),
     ),
   ];
 }
